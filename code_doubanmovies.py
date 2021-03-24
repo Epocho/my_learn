@@ -9,13 +9,13 @@ import sqlite3 #sqlite数据库操作
 def main():
     baseurl = 'https://movie.douban.com/top250?start='
     datalist = getData(baseurl)
-    savepath = 'E:\Python\my_python\豆瓣电影top250.xls'
+    savepath = '豆瓣电影top250.xls'
     saveData(datalist,savepath)
     
 
 def askURL(url):
     head = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36 Edg/89.0.774.50"
+       # 自填
     }
     request = urllib.request.Request(url,headers=head)
     try:
